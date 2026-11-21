@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(4, 57, 90);
+}
 header {
     background-image: url("../img/tlo.jpg"); /* wyszlam z folderu ../ */
     width: 100%;
@@ -20,15 +23,50 @@ header h1 {
     justify-content: center;
  }
 nav{
-    background-color: grey;
-    height: 100px;
+    background-color: rgb(106, 165, 179);
     text-align: center;
 }
-nav ul li{
+.menu_item {  /* li glowne */
     display: inline;
     line-height: 100px;
     padding: 10px;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.25em;
+    width: 15%;
+    white-space: nowrap;
+    position: relative; /* miejsce odniesienia dla absolute */
+    color: rgb(3, 58, 58);
 
+}
+
+.menu, .submenu { /* ul glowne*/ 
+    padding: 0px;
+}
+
+.menu_item:hover {
+    background-color: rgb(175, 228, 223);
+} 
+.submenu { /* ul mniejsze */
+    visibility: collapse;
+    position: absolute; /* ustawienie dokładne, nie wplywa na nic dookola */
+    top: 100%; 
+    left: 50%; /* zaczyna sie 50% dalej od punktu wyjscia */
+    background-color: #84b4be;
+    list-style: none;
+    width: 100px;
+    transform: translateX(-50%); /* cofa sie o 50% swojej szerokosci */
+    font-weight: lighter;
+    color: rgb(3, 99, 94);
+    
+
+}
+
+.menu_item:hover .submenu {
+    visibility: visible;
+    z-index: 1000; /* są na gorze strony */
+    
+}
+
+.menu_subitem:hover {
+    background-color: rgb(170, 214, 214);
 }
