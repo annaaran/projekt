@@ -1,0 +1,31 @@
+.current_menu_item {  /* li glowne */
+    display: inline;
+    line-height: 100px;
+    padding: 10px; /*margines wewnetrzny*/
+    font-weight: bold;
+    font-size: 1.25em;
+    width: 15%;
+    white-space: nowrap; /*nie zawija tekstu przy spacji*/
+    position: relative; /* miejsce odniesienia dla absolute */
+    color: rgb(3, 58, 58);
+    background-color: rgb(175, 228, 223);
+}
+
+main {
+    background: rgb(178, 210, 207);
+    color: rgb(3, 58, 58);
+    padding: 10px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.ekg_foto {
+    height: 250px;
+    float: right;
+    margin-left: 20px;
+}
+
+.wykres_ekg {
+    background-color: rgb(175, 228, 223);
+    text-align: center;
+}
